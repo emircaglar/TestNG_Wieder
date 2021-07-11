@@ -40,6 +40,7 @@ public class _02_Enable {
 
     @Test
     void test1() {
+        System.out.println("für url");
         System.out.println(driver.getCurrentUrl());
     }
 
