@@ -1,6 +1,8 @@
 package utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.testng.annotations.AfterClass;
@@ -23,6 +25,8 @@ public class GeneralWebDriver {
 
         driver.get("http://opencart.abstracta.us/index.php?route=account/login");
 
+        Login();
+
     }
 
     @AfterClass
@@ -33,7 +37,26 @@ public class GeneralWebDriver {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       // driver.quit();
+       driver.quit();
 
     }
+
+    void Login() {
+        WebElement inputEmail = driver.findElement(By.id("input-email"));
+        inputEmail.sendKeys("asd@gmail.com");
+
+        WebElement inputPassword = driver.findElement(By.id("input-password"));
+        inputPassword.sendKeys("123qweasd");
+
+        WebElement loginButton = driver.findElement(By.cssSelector("input[value='Login']"));
+        loginButton.click();
+
+        WebElement loginButtonCheck = driver.findElement(By.id("details-button"));
+        loginButtonCheck.click();
+
+        WebElement loginButtonCheck2 = driver.findElement(By.id("proceed-link"));
+        loginButtonCheck2.click();
+    }
+
+
 }
