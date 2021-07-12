@@ -33,7 +33,7 @@ public class GeneralWebDriver {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.quit();
+       // driver.quit();
 
     }
 }
