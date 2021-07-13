@@ -24,4 +24,12 @@ public class Tools {
         WebElement ssuccessfully_Message = driver.findElement(By.cssSelector("div.alert.alert-success.alert-dismissible"));
         Assert.assertTrue(ssuccessfully_Message.getText().contains("success"));
     }
+
+    public static void warte(int sekunde){
+        try {
+            Thread.sleep(sekunde*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
