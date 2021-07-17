@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import utilities.GeneralWebDriver;
 import utilities.Tools;
 
+import java.util.List;
+
 public class _02_address_Funktionality extends GeneralWebDriver {
 
 
@@ -58,6 +60,22 @@ public class _02_address_Funktionality extends GeneralWebDriver {
 // dieser Code hängt vom vorherigen Code ab
     void address_Bearbeiten() {
 
+        WebElement adrees = driver.findElement(By.linkText("Address Book"));
+        adrees.click();
+
+        List<WebElement> editAll = driver.findElements(By.xpath("//a[text()='Edit']"));
+        WebElement edit = editAll.get(editAll.size() - 1);
+        edit.click();
+
+        driver.findElement(By.id("input-firstname")).sendKeys("bilge");
+        driver.findElement(By.id("input-lastname")).sendKeys("gul");
+
+
+        WebElement elementt= driver.findElement(By.className("btn-primary"));
+        WebDriverWait wait1=new WebDriverWait(driver, 30);
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.className("btn-primary")));
+        elementt.click();
+        Tools.MessageBestätigung(driver);
 
     }
 
