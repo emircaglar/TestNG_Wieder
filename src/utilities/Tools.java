@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
@@ -32,4 +33,17 @@ public class Tools {
             e.printStackTrace();
         }
     }
+
+    public static void selectRandom(WebElement element){
+
+        Select select=new Select(element);
+        select.selectByIndex(Random_Nummer_Get(select.getOptions().size()));
+    }
+
+    public static int Random_Nummer_Get(int random){
+        int donut=(int)(Math.random()*random)+1;
+
+        return donut;
+    }
+
 }

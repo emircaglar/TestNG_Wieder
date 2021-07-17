@@ -16,7 +16,7 @@ public class _02_Subcribe extends GeneralWebDriver {
     // das ist wie POM (page object model)
 
 
-    @Test
+    @Test(priority = 1)
     void subcribeFunction_Yes() {
         WebElement newsletterClick = driver.findElement(link);
         newsletterClick.click();
@@ -30,7 +30,7 @@ public class _02_Subcribe extends GeneralWebDriver {
         Tools.MessageBestätigung(driver);
     }
 
-    @Test
+    @Test(priority = 2)
     void subcribeFunction_No() {
         WebElement newsletterClick = driver.findElement(link);
         newsletterClick.click();
@@ -44,7 +44,7 @@ public class _02_Subcribe extends GeneralWebDriver {
         Tools.MessageBestätigung(driver);
     }
 
-    @Test
+    @Test(priority = 3)
     void subcribeFunction_No_oder_Yes() {
         WebElement newsletterClick = driver.findElement(By.xpath("(//a[text()='Newsletter'])[1]"));
         newsletterClick.click();
