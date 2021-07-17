@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import utilities.GeneralWebDriver;
+import utilities.Tools;
 
 public class _02_address_Funktionality extends GeneralWebDriver {
 
@@ -37,9 +38,9 @@ public class _02_address_Funktionality extends GeneralWebDriver {
         address_Book_Newaddres_PostCode.sendKeys("54125");
 
         WebElement address_Book_Newaddres_Country = driver.findElement(By.id("input-country"));
-        Select Countr_Menu=new Select(address_Book_Newaddres_Country);
-        Countr_Menu.selectByIndex(5);
-
+        //Select Countr_Menu=new Select(address_Book_Newaddres_Country);
+        //Countr_Menu.selectByIndex(5);
+        Tools.selectRandom(address_Book_Newaddres_Country);
 
 
 
@@ -47,8 +48,9 @@ public class _02_address_Funktionality extends GeneralWebDriver {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[id='input-zone']")));
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("select[id='input-zone']>option"),2));
         WebElement address_Book_Newaddres_Zone= driver.findElement(By.id("input-zone"));
-        Select Zone_Menu=new Select(address_Book_Newaddres_Zone);
-        Zone_Menu.selectByIndex(3);
+        //Select Zone_Menu=new Select(address_Book_Newaddres_Zone);
+        //Zone_Menu.selectByIndex(3);
+        Tools.selectRandom(address_Book_Newaddres_Zone);
 
     }
 
