@@ -45,8 +45,8 @@ public class _02_address_Funktionality extends GeneralWebDriver {
 
 
         WebDriverWait wait=new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[id='input-zone']")));
-        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("select[id='input-zone']>option"),2));
+        //wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[id='input-zone']")));
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("select[id='input-zone']>option"),108));
         WebElement address_Book_Newaddres_Zone= driver.findElement(By.id("input-zone"));
         //Select Zone_Menu=new Select(address_Book_Newaddres_Zone);
         //Zone_Menu.selectByIndex(3);
