@@ -15,7 +15,7 @@ public class _02_address_Funktionality extends GeneralWebDriver {
 
 
     @Test
-   void address_Hinzufugen() {
+    void address_Hinzufugen() {
 
 
         WebElement address_Book_button = driver.findElement(By.xpath("(//a[text()='Address Book'])[1]"));
@@ -45,11 +45,10 @@ public class _02_address_Funktionality extends GeneralWebDriver {
         Tools.selectRandom(address_Book_Newaddres_Country);
 
 
-
-        WebDriverWait wait=new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         //wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[id='input-zone']")));
-        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("select[id='input-zone']>option"),108));
-        WebElement address_Book_Newaddres_Zone= driver.findElement(By.id("input-zone"));
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("select[id='input-zone']>option"), 108));
+        WebElement address_Book_Newaddres_Zone = driver.findElement(By.id("input-zone"));
         //Select Zone_Menu=new Select(address_Book_Newaddres_Zone);
         //Zone_Menu.selectByIndex(3);
         Tools.selectRandom(address_Book_Newaddres_Zone);
@@ -71,8 +70,8 @@ public class _02_address_Funktionality extends GeneralWebDriver {
         driver.findElement(By.id("input-lastname")).sendKeys("gul");
 
 
-        WebElement elementt= driver.findElement(By.className("btn-primary"));
-        WebDriverWait wait1=new WebDriverWait(driver, 30);
+        WebElement elementt = driver.findElement(By.className("btn-primary"));
+        WebDriverWait wait1 = new WebDriverWait(driver, 30);
         wait1.until(ExpectedConditions.visibilityOfElementLocated(By.className("btn-primary")));
         elementt.click();
         Tools.MessageBestätigung(driver);
@@ -82,6 +81,14 @@ public class _02_address_Funktionality extends GeneralWebDriver {
     @Test(dependsOnMethods = {"address_Bearbeiten"})
     void address_Löschen() {
 
+        WebElement adrees = driver.findElement(By.linkText("Address Book"));
+        adrees.click();
+
+        List<WebElement> editAll = driver.findElements(By.linkText("Delete"));
+        WebElement edit = editAll.get(editAll.size() - 1);
+        edit.click();
+
+        Tools.MessageBestätigung(driver);
 
     }
 }
