@@ -17,7 +17,7 @@ public class GeneralWebDriver {
     @BeforeClass
     public void anfangAktionen() {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver1.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -37,7 +37,7 @@ public class GeneralWebDriver {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       //driver.quit();
+       driver.quit();
 
     }
 
