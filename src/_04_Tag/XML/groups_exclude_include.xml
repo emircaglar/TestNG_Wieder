@@ -1,0 +1,49 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit1">
+    <test name="test1">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes><!--in hier kann der class funktioniert werden -->
+            <class name="_04_Tag._03_grups"></class>
+
+        </classes>
+    </test>
+    <test name="test2">
+        <groups>
+            <run>
+                <include name="regresion"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="_04_Tag._03_grups"></class>
+
+        </classes>
+    </test>
+    <test name="test3">
+        <groups>
+            <run>
+                <exclude name="smoke"></exclude>
+            </run>
+        </groups>
+        <classes><!--in hier kann der class funktioniert werden -->
+            <class name="_04_Tag._03_grups"></class>
+
+        </classes>
+    </test>
+    <test name="test4">
+        <groups>
+            <run>
+                <exclude name="smoke"></exclude>
+                <exclude name="regresion"></exclude>
+            </run>
+        </groups>
+        <classes><!--in hier kann der class funktioniert werden -->
+            <class name="_04_Tag._03_grups"></class>
+
+        </classes>
+    </test>
+</suite>
