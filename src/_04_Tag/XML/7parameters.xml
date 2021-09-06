@@ -1,0 +1,18 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit1">
+    <test name="test1">
+        <parameter name="search" value="samsung"></parameter>
+        <classes>
+            <class name="_04_Tag._05_mac_Oder_samsung"></class>
+
+        </classes>
+    </test>
+    <test name="test2">
+        <parameter name="search" value="mac"></parameter>
+        <classes>
+            <class name="_04_Tag._05_mac_Oder_samsung"></class>
+
+        </classes>
+    </test>
+</suite>
