@@ -6,7 +6,7 @@
         <parameter name="search" value="samsung"></parameter>
 
         <classes>
-            <class name="_04_Tag._06_mac_samsung_Parameter_Browser"></class>
+            <class name="_04_Tag_Wichtig._06_mac_samsung_Parameter_Browser"></class>
 
         </classes>
     </test>
@@ -14,7 +14,7 @@
         <parameter name="search" value="mac"></parameter>
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="_04_Tag._06_mac_samsung_Parameter_Browser"></class>
+            <class name="_04_Tag_Wichtig._06_mac_samsung_Parameter_Browser"></class>
 
         </classes>
     </test>

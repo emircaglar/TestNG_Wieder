@@ -1,7 +1,6 @@
-package _04_Tag;
+package _04_Tag_Wichtig;
 
 import org.testng.annotations.*;
-import org.testng.internal.annotations.IBeforeSuite;
 
 public class _01_befor_after {
     @BeforeSuite

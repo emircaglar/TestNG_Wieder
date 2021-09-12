@@ -4,14 +4,14 @@
     <test name="test1">
         <parameter name="search" value="samsung"></parameter>
         <classes>
-            <class name="_04_Tag._05_mac_Oder_samsung"></class>
+            <class name="_04_Tag_Wichtig._05_mac_Oder_samsung"></class>
 
         </classes>
     </test>
     <test name="test2">
         <parameter name="search" value="mac"></parameter>
         <classes>
-            <class name="_04_Tag._05_mac_Oder_samsung"></class>
+            <class name="_04_Tag_Wichtig._05_mac_Oder_samsung"></class>
 
         </classes>
     </test>

@@ -2,10 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suit1">
     <test name="test1">
-        <parameter name="message" value="hier kann man deine idee aufschreiben"></parameter>
         <classes>
-            <class name="_04_Tag._04_Contact_Us"></class>
-
+            <class name="_04_Tag_Wichtig._01_befor_after"></class>
+            <class name="_04_Tag_Wichtig._02_befor_after2"></class>
         </classes>
     </test>
 </suite>

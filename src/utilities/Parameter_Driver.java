@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Parameter_Driver {
 
-    public static WebDriver driver;
+    protected  WebDriver driver;// wenn wir hier static schreiben , konnen wir miteinander browser nicht starten lassen
 
     @BeforeClass
     @Parameters("browser")
