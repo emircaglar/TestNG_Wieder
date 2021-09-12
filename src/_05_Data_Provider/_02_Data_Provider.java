@@ -7,12 +7,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utilities.GeneralWebDriver;
+import utilities.Parameter_Driver;
 
 import java.util.List;
 
-public class _02_Data_Provider extends GeneralWebDriver {
+public class _02_Data_Provider extends Parameter_Driver {
 
     @Test(dataProvider="getData")
+    @Parameters("browser")
     public void mac_smasung(String suchen) {
 
         WebElement search_button = driver.findElement(By.cssSelector("input[name='search']"));
