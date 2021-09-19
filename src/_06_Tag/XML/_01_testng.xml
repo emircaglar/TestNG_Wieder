@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="dataProvider">
+    <test name="test1">
+        <parameter name="search" value="ipod"></parameter>
+        <classes>
+            <class name="_06_Tag._02_Einkauf"></class>
+        </classes>
+    </test>
+</suite>
